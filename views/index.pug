@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  table(class='tg')
+    tr
+      td(class='tg-0lax')
+        img(src=baseUrl+':9091/html/cam_pic_new.php', onclick="toggle_fullscreen(this);")
+        br/
+        a(href=baseUrl+':9091/html') hscam001
+      td(class='tg-0lax')
+        img(style='-webkit-user-select: none;',src=baseUrl+':9093/html/cam_pic_new.php', onclick="toggle_fullscreen(this);")
+        br/    
+        span(style='color:white')='Night Vision:'
+        input(type='button',value='On',onclick='$.get("'+baseUrl+':9393/ledon")')
+        input(type='button',value='Off',onclick='$.get("'+baseUrl+':9393/ledoff")')
+        a(href=baseUrl+':9093/html') hscam003    
+    tr
+      td(class='tg-0lax')
+        img(style='-webkit-user-select: none;',src=baseUrl+':9092/html/cam_pic_new.php', onclick="toggle_fullscreen(this);")
+        br/
+        a(href=baseUrl+':9092/html') hscam002
+      td(class='tg-0lax')
+        img(style='-webkit-user-select: none;',src=baseUrl+':9094/html/cam_pic_new.php', onclick="toggle_fullscreen(this);")
+        br/
+        a(href=baseUrl+':9094/html') hscam004
+  div(id='background',style='display: none')
+
